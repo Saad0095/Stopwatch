@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-    <h1>StopWatch</h1>
+    <!-- <h1>StopWatch</h1> -->
     <div id="time">
         <h1 id="min">00</h1>
         <h1 class="column">:</h1>
@@ -19,9 +19,12 @@
         <!-- <h1 class="column">:</h1> -->
     </div>
 
-    <button id="startbtn" onclick="start()">Start</button>
-    <button id="stopbtn" onclick="stop()">Stop</button>
-    <button id="resetbtn" onclick="reset()">Reset</button>
+    <div class="button-container">
+    <button id="startbtn" class="btn btn-primary" onclick="start()">Start</button>
+    <button id="stopbtn" class="btn btn-danger" onclick="stop()">Stop</button>
+    <button id="resetbtn" class="btn btn-success" onclick="reset()">Reset</button>
+    </div>
+
     </div>
 
     <script src="app.js"></script>
