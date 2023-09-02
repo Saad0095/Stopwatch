@@ -1,16 +1,3 @@
-body{
-    background-color: orange;
-    color: white;
-}
-
-.container {
-    text-align: center;
-}
-
-#time {
-    margin-top: 30vh;
-}
-
 h1 {
     display: inline-block;
     width: 100px;
@@ -30,36 +17,177 @@ button {
     margin-left: 5px;
     margin-right: 5px;
     width: 250px;
-    /* font-family: 'Times New Roman', Times, serif; */
     font-weight: bolder;
 }
 
-/* #startbtn {}
 
-#stopbtn {}
-
-#resetbtn {} */
-
-@media (max-width:350px) {
+/* @media (max-width:350px) {
     h1{
         font-size: 45px;
         width: 43px;
     }
 
     button {
-        /* width: 5px; */
         margin-top: 15px;
     }
-}
+} */
 
-@media (max-width:770px) and (min-width:350px) {
+/* @media (max-width:770px) and (min-width:350px) {
     h1{
         font-size: 70px;
         width: 60px;
     }
 
     button {
-        /* width: 200px; */
+        margin-top: 15px;
+    }
+} */
+
+
+
+/***************************/
+
+
+
+body {
+    color: #fff; /* White text for better contrast */
+    font-family: Arial, sans-serif; /* Choose a standard font */
+    background-color: #8a2be2;
+    background-color: #d2691e;
+    background-color: #87ceeb;
+    background-color: #e6e6fa;
+    background-color: #40e0d0;
+    background-color: #708090;
+}
+
+.container {
+    text-align: center;
+}
+
+#time {
+    color: black;
+    margin-top: 30vh;
+    background-color: #fff; /* Add a background color to the stopwatch display */
+    padding: 10px; /* Add some padding for better spacing */
+    border-radius: 10px; /* Apply rounded corners */
+}
+
+h1 {
+    display: inline-block;
+    width: 100px;
+    font-size: 100px;
+    transition: all 0.3s ease; /* Add a transition effect for smoother number changes */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    margin: 8px;
+    margin-top: 12px;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    font-weight: bold;
+    background-color: #27ae60;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effect */
+    font-weight: bold;
+    /* background-color: #27ae60;  */
+    color: #fff; /* White text for better contrast */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease; /* Add hover effect */
+    border: 1.5px solid black; 
+    outline: none; /* Remove the button outline when clicked */
+}
+
+button:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #000; 
+}
+
+
+#startbtn {
+    background-color: #27ae60; /* Green */
+}
+
+#startbtn:hover {
+    background-color: #219d53; /* Darker Green on hover */
+}
+
+
+#stopbtn {
+    background-color: #e74c3c; /* Red */
+}
+
+#stopbtn:hover {
+    background-color: #c0382a; /* Darker Red on hover */
+}
+
+#resetbtn {
+    background-color: #3498db; 
+    color: #fff;
+}
+
+#resetbtn:hover {
+    background-color: #2980b9;
+}
+
+/* #resetbtn {
+    background-color: #555;
+    color: #fff; 
+}
+
+#resetbtn:hover {
+    background-color: #333; 
+} */
+
+
+
+
+
+/* Add icons to buttons (you can use Font Awesome or other icon libraries) */
+#startbtn::before {
+    content: "\f04b"; /* Play icon */
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+#stopbtn::before {
+    content: "\f04d"; /* Stop icon */
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+#resetbtn::before {
+    content: "\f021"; /* Refresh icon */
+    font-family: FontAwesome;
+    margin-right: 5px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 350px) {
+    h1 {
+        font-size: 45px;
+        width: 43px;
+    }
+
+    button {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 770px) and (min-width: 350px) {
+    h1 {
+        font-size: 70px;
+        width: 60px;
+    }
+
+    button {
         margin-top: 15px;
     }
 }
