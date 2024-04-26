@@ -1,65 +1,8 @@
-h1 {
-    display: inline-block;
-    width: 100px;
-    font-size: 100px;
-
-}
-
-.button-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button {
-    margin-top: 4px;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 250px;
-    font-weight: bolder;
-}
-
-
-/* @media (max-width:350px) {
-    h1{
-        font-size: 45px;
-        width: 43px;
-    }
-
-    button {
-        margin-top: 15px;
-    }
-} */
-
-/* @media (max-width:770px) and (min-width:350px) {
-    h1{
-        font-size: 70px;
-        width: 60px;
-    }
-
-    button {
-        margin-top: 15px;
-    }
-} */
-
-
-
-/***************************/
-
-
-
 body {
     color: #fff;
-    /* White text for better contrast */
     font-family: Arial, sans-serif;
-    /* Choose a standard font */
-    background-color: #8a2be2;
     background-color: #d2691e;
-    background-color: #87ceeb;
-    background-color: #e6e6fa;
-    background-color: #40e0d0;
-    background-color: #708090;
+    background-color: black;
 }
 
 .container {
@@ -67,25 +10,25 @@ body {
 }
 
 #time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: black;
     margin-top: 30vh;
-    background-color: #fff;
-    /* Add a background color to the stopwatch display */
+    /* background-color: #fff; */
     padding: 10px;
-    /* Add some padding for better spacing */
     border-radius: 10px;
-    /* Apply rounded corners */
+    border: 2px solid black;
 }
 
 h1 {
-    display: inline-block;
-    width: 100px;
     font-size: 100px;
     transition: all 0.3s ease;
-    /* Add a transition effect for smoother number changes */
+    color: blueviolet;
+
 }
 
-.button-container {
+.buttons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -93,53 +36,33 @@ h1 {
 }
 
 button {
-    margin: 8px;
-    margin-top: 12px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: #27ae60;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    /* Add hover effect */
-    font-weight: bold;
-    /* background-color: #27ae60;  */
-    color: #fff;
-    /* White text for better contrast */
-    cursor: pointer;
-    /* Add hover effect */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, border 0.3s ease;
-    border: 1.5px solid black;
-    outline: none;
-    /* Remove the button outline when clicked */
+    margin: 10px;
+    padding: 10px 50px;
+    border: 1px solid black;
+    color: white;
+    border-radius: 10px;
 }
 
 button:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    /* border: 2px solid #000;  */
 }
 
 
 #startbtn {
     background-color: #27ae60;
-    /* Green */
 }
 
 #startbtn:hover {
     background-color: #219d53;
-    /* Darker Green on hover */
 }
 
 
 #stopbtn {
     background-color: #e74c3c;
-    /* Red */
 }
 
 #stopbtn:hover {
     background-color: #c0382a;
-    /* Darker Red on hover */
 }
 
 #resetbtn {
@@ -151,46 +74,29 @@ button:hover {
     background-color: #2980b9;
 }
 
-/* #resetbtn {
-    background-color: #555;
-    color: #fff; 
-}
-
-#resetbtn:hover {
-    background-color: #333; 
-} */
-
-
-
-
-
-/* Add icons to buttons (you can use Font Awesome or other icon libraries) */
-#startbtn::before {
+/* #startbtn::before {
     content: "\f04b";
-    /* Play icon */
     font-family: FontAwesome;
     margin-right: 5px;
 }
 
 #stopbtn::before {
     content: "\f04d";
-    /* Stop icon */
     font-family: FontAwesome;
     margin-right: 5px;
 }
 
 #resetbtn::before {
     content: "\f021";
-    /* Refresh icon */
     font-family: FontAwesome;
     margin-right: 5px;
-}
+} */
 
 /* Media queries for responsive design */
 @media (max-width: 350px) {
     h1 {
         font-size: 45px;
-        width: 43px;
+        /* width: 43px; */
     }
 
     button {
@@ -200,8 +106,8 @@ button:hover {
 
 @media (max-width: 770px) and (min-width: 350px) {
     h1 {
-        font-size: 70px;
-        width: 60px;
+        font-size: 50px;
+        /* width: 60px; */
     }
 
     button {

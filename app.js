@@ -1,15 +1,23 @@
-var interval;
+let interval;
 
-var minutes = "0" + 0
-var seconds = "0" + 0
-var miliseconds = "0" + 0
+let minutes = 0
+let seconds = 0
+let miliseconds = 0
 
-var getmin = document.getElementById('min')
-var getsec = document.getElementById('sec')
-var getmilisec = document.getElementById('milisec')
+let getmin = document.getElementById('min')
+let getsec = document.getElementById('sec')
+let getmilisec = document.getElementById('milisec')
 
-function start(){
-interval = setInterval(function(){
+getsec.innerHTML = "00"
+getmilisec.innerHTML = "00" 
+getmin.innerHTML = "00" 
+
+function start() {
+   interval = setInterval(updateTimer, 10); 
+   document.getElementById('startbtn').disabled = true; 
+}
+
+function updateTimer(){
      miliseconds++
      getmilisec.innerHTML = "0" + miliseconds
      if (miliseconds >= 10){
@@ -22,7 +30,7 @@ interval = setInterval(function(){
         if (seconds >= 10){
             getsec.innerHTML = seconds
          }
-        miliseconds = "0" + 0
+        miliseconds = 0
      }
 
      if (seconds == 60){
@@ -31,11 +39,8 @@ interval = setInterval(function(){
         if (minutes >= 10){
             getmin.innerHTML = minutes
          }
-        seconds = "0" + 0
+        seconds = 0
      }
-},10)
-
-document.getElementById('startbtn').disabled = true
 }
 
 
@@ -46,11 +51,11 @@ function stop(){
 
 function reset(){
     clearInterval(interval)
-    seconds = "0" + 0
-    miliseconds = "0" + 0
-    minutes = "0" + 0
-    getsec.innerHTML = "0" + 0
-    getmilisec.innerHTML = "0" + 0
-    getmin.innerHTML = "0" + 0
+    seconds = 0
+    miliseconds = 0
+    minutes = 0
+    getsec.innerHTML = "00"
+    getmilisec.innerHTML = "00" 
+    getmin.innerHTML = "00" 
     document.getElementById('startbtn').disabled = false
 }
